@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+﻿using KSODotNetCore.ConsoleApp.Dtos;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KSODotNetCore.ConsoleApp
+namespace KSODotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {

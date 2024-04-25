@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KSODotNetCore.ConsoleApp
+namespace KSODotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
@@ -98,7 +98,7 @@ namespace KSODotNetCore.ConsoleApp
 
         public void Update(int id, string title, string author, string content)
         {
-            SqlConnection connection = new SqlConnection( _sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
             string query = @"UPDATE [dbo].[Tbl_Blog]

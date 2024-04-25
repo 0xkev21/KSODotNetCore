@@ -1,4 +1,6 @@
 ﻿using Dapper;
+using KSODotNetCore.ConsoleApp.Dtos;
+using KSODotNetCore.ConsoleApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,11 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KSODotNetCore.ConsoleApp
+namespace KSODotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
-        public void Run() {
+        public void Run()
+        {
             //Read();
             //Edit(1);
             //Edit(10);
@@ -19,7 +22,8 @@ namespace KSODotNetCore.ConsoleApp
             Delete(10);
         }
 
-        private void Read() {
+        private void Read()
+        {
             using IDbConnection db = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
             List<BlogDto> list = db.Query<BlogDto>("select * from tbl_blog").ToList();
             foreach (BlogDto item in list)
@@ -36,7 +40,7 @@ namespace KSODotNetCore.ConsoleApp
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
             var item = db.Query<BlogDto>("select * from tbl_blog where blogid = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found");
                 return;
