@@ -40,7 +40,10 @@ Console.WriteLine("Hello, World!");
 //adoDotNetExample.Edit(9);
 //adoDotNetExample.Edit(8);
 
-DapperExample dapper = new DapperExample();
-dapper.Run();
+//DapperExample dapper = new DapperExample();
+//dapper.Run();
+
+EFCoreExample efCoreExample = new EFCoreExample();
+efCoreExample.Run();
 
 Console.ReadKey();

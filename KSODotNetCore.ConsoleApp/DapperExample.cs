@@ -19,7 +19,7 @@ namespace KSODotNetCore.ConsoleApp
             Delete(10);
         }
 
-        public void Read() {
+        private void Read() {
             using IDbConnection db = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
             List<BlogDto> list = db.Query<BlogDto>("select * from tbl_blog").ToList();
             foreach (BlogDto item in list)
@@ -32,7 +32,7 @@ namespace KSODotNetCore.ConsoleApp
             }
         }
 
-        public void Edit(int id)
+        private void Edit(int id)
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
             var item = db.Query<BlogDto>("select * from tbl_blog where blogid = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
@@ -47,7 +47,7 @@ namespace KSODotNetCore.ConsoleApp
             Console.WriteLine($"Blog Title: {item.BlogContent}");
         }
 
-        public void Create(string title, string author, string content)
+        private void Create(string title, string author, string content)
         {
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
@@ -71,7 +71,7 @@ namespace KSODotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void Update(int id, string title, string author, string content)
+        private void Update(int id, string title, string author, string content)
         {
             string query = @"UPDATE [dbo].[Tbl_Blog]
    SET [BlogTitle] = @BlogTitle
@@ -93,7 +93,7 @@ namespace KSODotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void Delete(int id)
+        private void Delete(int id)
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
             string query = "delete from tbl_blog where BlogId = @BlogId";
