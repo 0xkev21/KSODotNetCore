@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KSODotNetCore.ConsoleApp", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{681B653A-906D-4053-B0C6-6B468E1DCADB}"
 	ProjectSection(SolutionItems) = preProject
+		KSODotNetCore.sql = KSODotNetCore.sql
 		README.md = README.md
 	EndProjectSection
 EndProject
