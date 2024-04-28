@@ -11,7 +11,12 @@ namespace KSODotNetCore.ConsoleApp.EFCoreExamples
     internal class EFCoreExample
     {
 
-        private readonly AppDbContext db = new AppDbContext();
+        private readonly AppDbContext db;
+
+        public EFCoreExample()
+        {
+            db = new AppDbContext();
+        }
         public void Run()
         {
             //Read();
