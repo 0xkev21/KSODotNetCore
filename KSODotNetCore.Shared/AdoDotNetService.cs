@@ -76,8 +76,13 @@ namespace KSODotNetCore.Shared
             SqlCommand cmd = new SqlCommand(query, connection);
             if (parameters is not null && parameters.Length > 0)
             {
-                var parametersArray = parameters.Select(item => new SqlParameter(item.Name, item.Value)).ToArray();
-                cmd.Parameters.AddRange(parametersArray);
+                //var parametersArray = parameters.Select(item => new SqlParameter(item.Name, item.Value)).ToArray();
+                //cmd.Parameters.AddRange(parametersArray);
+
+                foreach (var item in parameters)
+                {
+                    cmd.Parameters.AddWithValue(item.Name, item.Value);
+                }
             }
             int result = cmd.ExecuteNonQuery();
 
