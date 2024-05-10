@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
@@ -9,12 +10,12 @@ namespace KSODotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin
     [ApiController]
     public class LatHtaukBayDinController : ControllerBase
     {
-        private LatHtaukBayDin _data;
+        //private LatHtaukBayDin _data;
 
-        public LatHtaukBayDinController()
-        {
+        //public LatHtaukBayDinController()
+        //{
             
-        }
+        //}
 
         private async Task<LatHtaukBayDin>GetDataAsync()
         {

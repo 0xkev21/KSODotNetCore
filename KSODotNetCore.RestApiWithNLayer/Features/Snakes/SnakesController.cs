@@ -8,8 +8,6 @@ namespace KSODotNetCore.RestApiWithNLayer.Features.Snakes
     [ApiController]
     public class SnakesController : ControllerBase
     {
-        private  SnakesModel _data;
-        
         private async Task<SnakesModel>GetDataAsync()
         {
             string jsonStr = await System.IO.File.ReadAllTextAsync("Snakes.json");
