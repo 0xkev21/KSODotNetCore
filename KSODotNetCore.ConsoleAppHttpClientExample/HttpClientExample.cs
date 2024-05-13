@@ -101,6 +101,11 @@ namespace KSODotNetCore.ConsoleAppHttpClientExample
             }
         }
 
+        //private async Task PatchAsync(int id, string title, string author, string content)
+        //{
+            
+        //}
+
         private async Task DeleteAsync(int id)
         {
             var response = await _client.DeleteAsync($"{_blogEndpoint}/{id}");
