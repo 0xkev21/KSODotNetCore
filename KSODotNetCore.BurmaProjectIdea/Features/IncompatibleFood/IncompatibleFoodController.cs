@@ -34,7 +34,7 @@ namespace KSODotNetCore.RestApiWithNLayer.Features.IncompatibleFood
             return Ok(foodsByDes);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("incompatiblefoods/{id}")]
         public async Task<IActionResult> GetFoodById(int id)
         {
             var model = await GetDataAsync();

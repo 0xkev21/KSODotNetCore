@@ -22,13 +22,22 @@ namespace KSODotNetCore.RestApiWithNLayer.Features.Snakes
             return Ok(model.snakes);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("snakes/{id}")]
         public async Task<IActionResult> Snake(int id)
         {
             var model = await GetDataAsync();
             var snake = model.snakes.FirstOrDefault(x => x.Id == id);
             if (snake is null) return NotFound("No data found");
             return Ok(snake);
+        }
+
+        [HttpGet("snakes/s/{name}")]
+        public async Task<IActionResult> SnakesByName(string name)
+        {
+            var model = await GetDataAsync();
+            var snakesByName = model.snakes.Where(x => x.MMName.Contains(name)).ToList();
+            if (snakesByName.Count == 0) return NotFound("no data found");
+            return Ok(snakesByName);
         }
     }
 }
