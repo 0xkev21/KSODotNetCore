@@ -25,7 +25,7 @@ namespace KSODotNetCore.Shared
             //{
             //    var list = db.Query<T>(query).ToList();
             //}
-            var list = db.Query<T>(query).ToList();
+            var list = db.Query<T>(query, param).ToList();
             return list;
         }
 
