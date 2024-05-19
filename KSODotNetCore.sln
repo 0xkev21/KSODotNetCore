@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KSODotNetCore.ConsoleAppRes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KSODotNetCore.PizzaApi", "KSODotNetCore.PizzaApi\KSODotNetCore.PizzaApi.csproj", "{D903E8DA-8F7B-4085-899A-39318F4E8947}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSODotNetCore.ConsoleAppRefitExample", "KSODotNetCore.ConsoleAppRefitExample\KSODotNetCore.ConsoleAppRefitExample.csproj", "{91F9764F-61F6-4D47-971D-26123BF26A50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KSODotNetCore.ConsoleAppRefitExample", "KSODotNetCore.ConsoleAppRefitExample\KSODotNetCore.ConsoleAppRefitExample.csproj", "{91F9764F-61F6-4D47-971D-26123BF26A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSODotNetCore.WinFormsApp", "KSODotNetCore.WinFormsApp\KSODotNetCore.WinFormsApp.csproj", "{4CB47A54-D16D-46B9-9FDA-41E5A9F0DBC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{91F9764F-61F6-4D47-971D-26123BF26A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91F9764F-61F6-4D47-971D-26123BF26A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91F9764F-61F6-4D47-971D-26123BF26A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB47A54-D16D-46B9-9FDA-41E5A9F0DBC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB47A54-D16D-46B9-9FDA-41E5A9F0DBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB47A54-D16D-46B9-9FDA-41E5A9F0DBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB47A54-D16D-46B9-9FDA-41E5A9F0DBC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
