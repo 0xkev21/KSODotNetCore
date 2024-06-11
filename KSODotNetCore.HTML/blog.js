@@ -8,6 +8,7 @@ function readBlog() {
 
 // Edit Function
 function editBlog(id) {
+  id = $()
   const list = getBlogs();
   const item = list.find((x) => x.id === id);
   if (item === undefined) {
@@ -95,7 +96,7 @@ function deleteBlog(id) {
     () => {
       return;
     },
-    { okButtonBackground: 'red'},
+    { okButtonBackground: "red" },
   );
 }
 
@@ -163,10 +164,10 @@ function getBlogTable() {
     const htmlRow = `
     <tr>
       <td>
-      <button type="button" class="btn btn-warning" onclick="editBlog('${
+      <button type="button" class="btn btn-warning" data-id="${item.id}" onclick="editBlog('${
         item.id
       }')">Edit</button>
-      <button type="button" class="btn btn-danger" onclick="deleteBlog('${
+      <button type="button" class="btn btn-danger" data-blog-id="${item.id}" onclick="deleteBlog('${
         item.id
       }')">Delete</button>
       </td>

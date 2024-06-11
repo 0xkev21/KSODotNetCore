@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Picker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css"
+    integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <input data-toggle="datepicker">
+  <textarea data-toggle="datepicker"></textarea>
+  <div data-toggle="datepicker"></div>
+
+  <label id="lbl" data-blog-id="blahblah"></label>
+  <button type="button" data-blog-id="1" class="btnClick">Get Id</button>
+  <button type="button" data-blog-id="2" class="btnClick">Get Id</button>
+  
+
+
+  <!-- J Query -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"
+    integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    $('[data-toggle="datepicker"]').datepicker({
+      autoHide: true,
+      format: 'dd-mm-yyyy',
+    });
+
+    // const id = document.getElementById('lbl').dataset.id;
+    // const id = $('#lbl').data('blog-id');
+    // console.log(id);
+
+    $('.btnClick').click(function() {
+      let id = $(this).data('blog-id');
+      console.log(id);
+    })
+  </script>
+</body>
+
+</html>
