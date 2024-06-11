@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toastify</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+
+  <button style="color:white; background-color:slateblue; padding:8px; border:none;" type="button" id="btnClick">
+    Wanna Go Back Home ?
+  </button>
+
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    const toast = Toastify({
+      text: "Click Here",
+      duration: 4000,
+      destination: "./index.html",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    });
+
+    document.querySelector('#btnClick').addEventListener('click', () => {
+      toast.showToast();
+    })
+
+  </script>
+</body>
+
+</html>
