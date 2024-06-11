@@ -69,11 +69,7 @@ function updateBlog(id, title, author, content) {
 
 // Delete Function
 function deleteBlog(id) {
-  Notiflix.Confirm.show(
-    "Confirm Delete",
-    "Are you sure you want to delete?",
-    "Delete",
-    "Cancel",
+  confirmMessage("Are you sure you want to delete?").then(
     () => {
       let list = getBlogs();
 
@@ -95,20 +91,11 @@ function deleteBlog(id) {
     },
     () => {
       return;
-    },
-    { okButtonBackground: "red" },
-  );
+    }
+  )
 }
 
-// random uuid generator
-function uuidv4() {
-  return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) =>
-    (
-      +c ^
-      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (+c / 4)))
-    ).toString(16),
-  );
-}
+
 
 // Get Blogs from localStorage function
 function getBlogs() {
@@ -130,22 +117,6 @@ $("#btnSave").click(function () {
     blogId = null;
   }
 });
-
-// Messages
-function successMessage(message) {
-  Swal.fire({
-    title: "Success!",
-    text: message,
-    icon: "success",
-  });
-}
-function errorMessage(message) {
-  Swal.fire({
-    title: "Error!",
-    text: message,
-    icon: "error",
-  });
-}
 
 // Form Controls reset
 function clearControls() {
